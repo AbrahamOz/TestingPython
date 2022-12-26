@@ -1,4 +1,4 @@
-import dndcharacterbuilder as dc
+import characterbuilder as dc
 
 
 
