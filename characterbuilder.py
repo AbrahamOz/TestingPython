@@ -1,3 +1,8 @@
+# import racestats as rs
+
+
+# print(rs.stat_changes)
+
 def choose_name():
     print('Choose your character\'s name:')
     name = input()
@@ -7,7 +12,7 @@ def choose_name():
 
 def choose_race():
     # List of available races and classes
-    races = ['Human', 'Elf', 'Dwarf', 'Halfling', 'Gnome']
+    races = ['Human', 'Elf', 'Dwarf', 'Halfling', 'Gnome', 'Dragonborn', 'Half-Elf', 'Half-Orc', 'Tiefling', 'Aarakocra', 'Genasi', 'Goliath', 'Aasimar', 'Firbolg', 'Kenku', 'Lizardfolk', 'Tabaxi']
     
 
     # Prompt the user to choose a race
@@ -92,6 +97,102 @@ def get_stat_changes(race):
             'intelligence': 2,
             'wisdom': 0,
             'charisma': 0
+        },
+        'Dragonborn': {
+            'strength': 2,
+            'dexterity': 0,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 1
+        },
+        'Half-Elf': {
+            'strength': 0,
+            'dexterity': 0,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 2
+        },
+        'Half-Orc': {
+            'strength': 2,
+            'dexterity': 0,
+            'constitution': 1,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 0
+        },
+        'Tiefling': {
+            'strength': 0,
+            'dexterity': 0,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 2
+        },
+        'Aarakocra': {
+            'strength': 0,
+            'dexterity': 2,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 1,
+            'charisma': 0
+        },
+        'Genasi': {
+            'strength': 0,
+            'dexterity': 0,
+            'constitution': 2,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 0
+        },
+        'Goliath': {
+            'strength': 2,
+            'dexterity': 0,
+            'constitution': 1,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 0
+        },
+        'Aasimar': {
+            'strength': 0,
+            'dexterity': 0,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 2
+        },
+        'Firbolg': {
+            'strength': 1,
+            'dexterity': 0,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 1,
+            'charisma': 0
+        },
+        'Kenku': {
+            'strength': 0,
+            'dexterity': 2,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 0
+        },
+        'Lizardfolk': {
+            'strength': 0,
+            'dexterity': 0,
+            'constitution': 1,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 0
+        },
+        'Tabaxi': {
+            'strength': 0,
+            'dexterity': 2,
+            'constitution': 0,
+            'intelligence': 0,
+            'wisdom': 0,
+            'charisma': 1
         }
     }
 
@@ -143,7 +244,6 @@ playercharacter = Character(
     
 )
 
-# racestats = get_stat_changes(playercharacter.race)
 
 choose_stats(playercharacter)
 
@@ -160,5 +260,5 @@ print(playercharacter.wisdom)
 print(playercharacter.charisma)
 print(playercharacter.hit_points)
 print(playercharacter.armor_class)
-#print(playercharacter.attacks_and_spells)
+print(playercharacter.attacks_and_spells)
 
