@@ -1,4 +1,4 @@
-# import racestats as rs
+import racestats as rs
 
 
 # print(rs.stat_changes)
@@ -38,170 +38,25 @@ def choose_class():
 
     return cls
 
+
+
 def choose_stats(self):
     #choose all stats
     print('Choose your character\'s strength:')
-    self.strength = int(input()) + get_stat_changes(playercharacter.race)['strength']
+    self.strength = int(input()) + rs.get_stat_changes(playercharacter.race)['strength']
     print('Choose your character\'s dexterity:')
-    self.dexterity = int(input()) + get_stat_changes(playercharacter.race)['dexterity']
+    self.dexterity = int(input()) + rs.get_stat_changes(playercharacter.race)['dexterity']
     print('Choose your character\'s constitution:')
-    self.constitution = int(input()) + get_stat_changes(playercharacter.race)['constitution']
+    self.constitution = int(input()) + rs.get_stat_changes(playercharacter.race)['constitution']
     print('Choose your character\'s intelligence:')
-    self.intelligence = int(input()) + get_stat_changes(playercharacter.race)['intelligence']
+    self.intelligence = int(input()) + rs.get_stat_changes(playercharacter.race)['intelligence']
     print('Choose your character\'s wisdom:')
-    self.wisdom = int(input()) + get_stat_changes(playercharacter.race)['wisdom']
+    self.wisdom = int(input()) + rs.get_stat_changes(playercharacter.race)['wisdom']
     print('Choose your character\'s charisma:')
-    self.charisma = int(input()) + get_stat_changes(playercharacter.race)['charisma']
+    self.charisma = int(input()) + rs.get_stat_changes(playercharacter.race)['charisma']
 
     return 
     
-
-def get_stat_changes(race):
-    stat_changes = {
-        'Human': {
-            'strength': 1,
-            'dexterity': 1,
-            'constitution': 1,
-            'intelligence': 1,
-            'wisdom': 1,
-            'charisma': 1
-        },
-        'Elf': {
-            'strength': 0,
-            'dexterity': 2,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Dwarf': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 2,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Halfling': {
-            'strength': 0,
-            'dexterity': 2,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Gnome': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 2,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Dragonborn': {
-            'strength': 2,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 1
-        },
-        'Half-Elf': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 2
-        },
-        'Half-Orc': {
-            'strength': 2,
-            'dexterity': 0,
-            'constitution': 1,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Tiefling': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 2
-        },
-        'Aarakocra': {
-            'strength': 0,
-            'dexterity': 2,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 1,
-            'charisma': 0
-        },
-        'Genasi': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 2,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Goliath': {
-            'strength': 2,
-            'dexterity': 0,
-            'constitution': 1,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Aasimar': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 2
-        },
-        'Firbolg': {
-            'strength': 1,
-            'dexterity': 0,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 1,
-            'charisma': 0
-        },
-        'Kenku': {
-            'strength': 0,
-            'dexterity': 2,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Lizardfolk': {
-            'strength': 0,
-            'dexterity': 0,
-            'constitution': 1,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 0
-        },
-        'Tabaxi': {
-            'strength': 0,
-            'dexterity': 2,
-            'constitution': 0,
-            'intelligence': 0,
-            'wisdom': 0,
-            'charisma': 1
-        }
-    }
-
-    return stat_changes[race]
-
-
-
-
-
 
 
 
